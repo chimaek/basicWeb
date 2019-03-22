@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            form example
+        </title>        
+        <style>
+            #container {
+                width:520px;
+                border:1px solid black;
+                padding:20px 40px;
+                margin:0 auto;
+            }
+            fieldset { margin-bottom:15px; border: 0 }
+            legend { font-weight:bold; display:none }
+            ul {list-style-type: none;}
+            li { line-height:30px;}        
+        </style>
+    </head>
+    <body >
+        <div id="container">
+            <h1>프론트엔드 개발자 지원서 </h1>
+            <p>
+                HTML, CSS, JAVASCRIPT에 대한 기술적 이해화 많은 경험이 있는분을 찾습니다.
+            </p>
+            <hr>
+            <form action="/" method="GET"  >
+                <fieldset>
+                    <legend>입사지원서</legend>
+                <h3>개인정보</h3>
+                <ul>
+                   <li> <label for='name'>이름</label><input type="text" name="text" required></li>
+                   <li> <label for='tel'>연락처</label><input type="tel" name="tel"></li>
+                   <li><lable for='major'>학과</lable>
+                    <select name="select">
+                        <optgroup label="공과대학">
+                            <option selected value="A">컴퓨터공학과</option>
+                        </optgroup>
+                        <optgroup label="사범대학">
+                            <option value="B">컴퓨터교육과</option>
+                            <option value="C">전산통계학과</option>
+                        </optgroup>
+                    </select>
+                    </li>
+                </ul>
+                <h3>지원분야</h3>
+                <ul>
+                    <li><input type="radio" name="radiotest" id="web_p"><label for="web_p">웹 퍼블리싱</label></li>
+                    <li><input type="radio" name="radiotest" id="web_app"><label for="web_app">웹 애플리케이션</label></li>
+                    <li><input type="radio" name="radiotest" id="web_sup"><label for="web_sup">웹 개발 지원</label></li>
+                </ul>
+                <h3>지원 동기</h3>
+                <textarea placeholder="지원동기를 작성해주세요.">
+
+                </textarea><br>
+                <input type="submit" value="접수하기">
+                <input type="reset" value="다시작성">
+            </form>
+        </div>
+    </body>
+</html>

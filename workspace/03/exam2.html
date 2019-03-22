@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            form example
+        </title>
+        <style>
+            label{font: 9px; width:100px; display:inline-block}
+        </style>
+    </head>
+    <body>
+        <form action="/" method="GET" enctype="multipart/form-data">
+            <fieldset>
+                <legend>개인정보 입력폼</legend>
+
+                <input name="no" type="hidden" value="12345" >
+                <label for="name">text</label>
+                <input id="name" name="id" type="text" placeholder="아이디" required ><br><br>
+
+                <label>password</label><input name="password"  type="password" placeholder="비밀번호" required><br><br>
+                <label>url</label> <input type="url" name="url" ><br><br>
+                <label>email</label> <input type="email" name="email" ><br><br>
+                <label>tel</label> <input type="tel" name="tel" ><br><br>
+                <label>number</label> <input type="number" name="number" min=10 max=100 step=5><br><br>
+                <label>range</label> <input type="range" name="range" id="range" min=10 max=100 step=5 oninput="result.value = this.value"><br><br>
+            
+                <label>radio</label> 
+                <input type="radio" name="radioTest" id="apple"><label for="apple">사과</label>
+                <input type="radio" name="radioTest" id="orange"><label for="orange">오렌지</label>
+                <input type="radio" name="radioTest" id="grape"><label for="grape">포도</label>
+                <br><br>
+                <label>checkbox</label> 
+                <input type="checkbox" name="agree" id="agree"><label for="agree">Agree</label><br><br>
+                <label>Color</label> <input type="color" name="color"><br><br>
+                <label>date</label> 
+                <input type="date" name="date" value="2019-03-22" min="2019-01-01" max="2019-04-15" > 
+                <input type="month" name="month" value="2019-03" min="2019-01" max="2019-04" > 
+                <input type="week" name="week"  value="2019-W03" min="2019-W01" max="2019-W05" >
+                <br><br>      
+                <label>datetime-local</label>           
+                <input type="datetime-local" name="datetime-local"   >
+                     
+                <label>file</label>           
+                <input type="file" name="file">
+                <br><br> 
+                <label>select</label>           
+                <select name="select">
+                    <optgroup label="공과대학">
+                        <option selected value="A">컴퓨터공학과</option>
+                    </optgroup>
+                    <optgroup label="사범대학">
+                        <option value="B">컴퓨터교육과</option>
+                        <option value="C">전산통계학과</option>
+                    </optgroup>
+                    <optgroup label="기타">
+                        <option value="D">유아교육과</option>
+                    </optgroup>                    
+                </select>
+            </fieldset>
+            <br><br>
+            <input type="submit" value="전송"> <input type="image" src="https://t1.daumcdn.net/daumtop_chanel/op/20170315064553027.png" value="전송" width=80 height=25>  <input type="reset" value="지우기">
+            <br><br>
+            <input type="button" value="button" >
+            <button><img src="https://t1.daumcdn.net/daumtop_chanel/op/20170315064553027.png" width=100 height=30></button>
+            <br><br>
+            <output name="result" for="range"></output>
+
+        </form>
+
+
+        <progress value=10 max=100 id="progress"></progress> <br>
+        <p>Heat the oven to <meter min="200" max="500" optimum="true">350 degrees</meter>.</p>
+
+    </body>
+</html>
