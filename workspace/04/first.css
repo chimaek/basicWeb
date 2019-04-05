@@ -1,8 +1,8 @@
 .css{
     color: green;
-    font-size: 10px !important;
+    font-size: 10px;
 }
 li{
     color: yellow
 }
-/* 인라인스타일 > ID스타일(#) > 클래스 스타일(.) > 태그 스타일 */
+/* 인라인스타일 > ID스타일(#) > 클래스 스타일(.) > 태그 스타일
