@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            ul.articles {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            ul.articles > li {
+                float: left;
+                width: 50%;
+                height: 200px;
+                overflow: hidden;
+            }
+            .article {
+                padding: 10px;
+            }
+            .article h3 {
+                margin: 5px 0;
+                line-height: 1.2em;
+                height: 2.4em;
+                overflow: hidden;
+            }
+            .article p {
+                line-height: 1.2em;
+                height: 3.6em;
+                overflow: hidden;
+                width: 100%;
+                word-wrap: break-word;
+                display: box;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                line-clamp: 3;
+                box-orient: vertical;
+            }
+            ul.articles::after {
+                display:block;
+                clear:both;
+                content: '';
+            }
+            footer {
+                background-color: #f0f0f0;
+                padding: 5px 10px;
+            }
+
+            @media all and (min-width: 800px) {
+                ul.articles > li {
+                    width:33.3%
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <ul class="articles">
+                <li>
+                    <section class="article">
+                        <h3>'곳곳이 격전지' 11월 4만7786가구 쏟아진다</h3>
+                        <small>헤럴드경제</small>
+                        <p>[헤럴드경제=정찬수 기자] 11월 분양 물량이 대거 쏟아진다. 추석 연휴와 부동산 대책 등으로 10월 계획됐던 일정이 잇따라 늦춰지면서 연말에 물량이 집중되는 모양새다.</p>
+                    </section>
+                </li>
+                <li>
+                    <section class="article">
+                        <h3>트럼프, 亞순방 앞두고 수십차례 점검회의..참모진 '노심초사'</h3>
+                        <small>연합뉴스</small>
+                        <p>(워싱턴=연합뉴스) 송수경 특파원 = 도널드 트럼프 미국 대통령이 3일 하와이를 거쳐 5일 일본을 시작으로 14일까지 아시아 5개국 순방을 앞두고 수십 차례에 걸쳐 참모진으로부터 브리핑을 받았다.</p>
+                    </section>
+                </li>
+                <li>
+                    <section class="article">
+                        <h3>'곳곳이 격전지' 11월 4만7786가구 쏟아진다</h3>
+                        <small>헤럴드경제</small>
+                        <p>[헤럴드경제=정찬수 기자] 11월 분양 물량이 대거 쏟아진다. 추석 연휴와 부동산 대책 등으로 10월 계획됐던 일정이 잇따라 늦춰지면서 연말에 물량이 집중되는 모양새다.</p>
+                    </section>
+                </li>
+                <li>
+                    <section class="article">
+                        <h3>트럼프, 亞순방 앞두고 수십차례 점검회의..참모진 '노심초사'</h3>
+                        <small>연합뉴스</small>
+                        <p>(워싱턴=연합뉴스) 송수경 특파원 = 도널드 트럼프 미국 대통령이 3일 하와이를 거쳐 5일 일본을 시작으로 14일까지 아시아 5개국 순방을 앞두고 수십 차례에 걸쳐 참모진으로부터 브리핑을 받았다.</p>
+                    </section>
+                </li>
+            </ul>
+        </section>
+        <hr>
+        <footer>
+        <p>Copyright 2017 Jeju National Univ.</p>
+        </footer>
+    </body>
+</html>
