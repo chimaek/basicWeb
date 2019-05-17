@@ -1,0 +1,23 @@
+dhtml{
+    height: 100%;
+}
+body{
+    
+}
+.main{
+    background-color: antiquewhite;
+}
+.header,.footer{
+    height: 100px;
+    background-color: aqua;
+}
+.footer{
+    margin-top: auto;
+}
+.header{
+
+}
+.flex_container{
+    display: flex;
+
+}
