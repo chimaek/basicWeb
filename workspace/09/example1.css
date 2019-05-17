@@ -1,0 +1,36 @@
+@media(min-width: 1025px){
+    .main,.side,.footer,.header{
+        display: block;
+    }
+    .header{
+        width: 960px;
+        height: 120px;
+        background-color: #066cfa;
+        border-bottom: 1px solid #000;
+        
+    }
+    .main{
+        width: 600px;
+        height: 400px;
+        background-color: #ffd800;
+        padding: 15px;
+        float: left;
+    }
+    .side{
+        width: 300px;
+        height: 400px;
+        background-color: #00ff90;
+        padding: 15px;
+        float: left;
+    }
+    .footer{
+        width: 960px;
+        height: 120px;
+        background-color: #c3590a;
+        clear: both;
+        
+    }
+}
+
+
+
