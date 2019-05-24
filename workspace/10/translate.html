@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background: #F5F3F4;
+                margin: 0;
+                padding: 10px;
+                font-family: 'Open Sans', sans-serif;
+                text-align: center;                    
+            }
+            
+            .container {
+                display: flex;
+                justify-content: center;                
+                flex-flow: row wrap;
+                width: 800px;        
+                margin:0 auto;        
+            }
+
+            .card {
+                
+                display: inline-block;
+                margin: 10px;
+                background: #fff;
+                padding: 15px;
+                min-width: 200px;
+                box-shadow: 0 3px 5px #ddd;
+                color: #555;
+                
+
+            }
+            
+            .card .box {
+                width: 100px;
+                height: 100px;
+                margin: auto;
+                background: #ddd;
+                cursor: pointer;
+                box-shadow: 0 0 5px #ccc inset;                
+            }
+
+            .card .box .fill {
+                width: 100px;
+                height: 100px;
+                position: relative;
+                background: #03A9F4;
+                opacity: .5;
+                box-shadow: 0 0 5px #ccc;   
+                border: 1px solid;             
+            }
+
+            .card p {
+                margin: 25px 0 0;
+            }
+            
+            .translate:hover .fill {                
+                transform: translate(50px, 50px);
+            }
+
+            .translateX:hover .fill {                
+                transform: translateX(50px);
+            }
+
+            .translateY:hover .fill {                
+                transform: translateY(50px);
+            }
+
+            .scale:hover .fill {                
+                transform: scale(2);
+            }
+
+            .scaleX:hover .fill {                
+                transform: scaleX(2);
+            }
+
+            .scaleY:hover .fill {                
+                transform: scaleY(2);
+            }
+
+            .rotate:hover .fill {                
+                transform: rotate(45deg);
+            }
+
+            .skew:hover .fill {                
+                transform: skew(10deg, 10deg);
+            }
+
+            .skewX:hover .fill {                
+                transform: skewX(10deg);
+            }            
+
+            .skewY:hover .fill {                
+                transform: skewY(0.174533rad);
+            }      
+
+            .matrix:hover .fill {                
+                transform: matrix(1.5, 0.174533, 0.174533, 1.5, 50, 50);
+            }                  
+
+            
+            /* 3d transform */            
+            .translate3d:hover .fill {                
+                transform: translate3d(50px, 50px, 50px);
+            }  
+            
+            .translateZ:hover .fill {                
+                transform: translateZ(50px);
+            }
+
+            .scale3d:hover .fill {                
+                transform: scale3d(2,2,2);
+            }  
+            
+            .scaleZ:hover .fill {                
+                transform: scaleZ(2);
+            }            
+
+            .rotate3d:hover .fill {                
+                transform: rotate3d(5,5,5,45deg);
+            }
+
+            .rotateX:hover .fill {                
+                transform: rotateX(45deg);                
+            }
+
+            .rotateY:hover .fill {                
+                transform:  rotateY(45deg);
+
+            }
+
+            .rotateZ:hover .fill {                
+                transform: rotateZ(45deg);
+            }            
+
+            .perspective .card .box{
+                perspective: 200px;
+                perspective-origin: center center;                
+         
+            }
+
+            /* 3d transform-origin */
+            .origin .origin-0-0-0:hover .fill {
+                /* left top */
+                transform-origin: 0 0 0;
+            }  
+
+            .origin .origin-100-0-0:hover .fill {            
+                /* right top */
+                transform-origin: 100% 0 0;
+            }                        
+
+            .origin .origin-100-100-0:hover .fill {
+                /* right bottom */
+                transform-origin: 100% 100% 0;      
+                
+            }
+
+            .origin .origin-0-100-0:hover .fill {        
+                /* left bottom */
+                transform-origin: 0 100% 0;            
+            }
+
+            .origin .origin-center:hover .fill {        
+                /* left bottom */
+                transform-origin: center center;            
+            }            
+        </style>        
+    </head>
+    <body>
+        <h3>2D Transform</h3>
+        <div class="container">
+            
+            <div class="card">
+                <div class="box translate">
+                    <div class="fill"></div>
+                </div>
+                <p> translate(50px, 50px) </p>
+            </div>  
+            
+            <div class="card">
+                <div class="box translateX">
+                    <div class="fill"></div>
+                </div>
+                <p> translateX(50px) </p>
+            </div> 
+
+            <div class="card">
+                <div class="box translateY">
+                    <div class="fill"></div>
+                </div>
+                <p> translateY(50px) </p>
+            </div> 
+
+            <div class="card">
+                <div class="box scale">
+                    <div class="fill"></div>
+                </div>
+                <p> scale(2) </p>
+            </div>  
+            
+            <div class="card">
+                <div class="box scaleX">
+                    <div class="fill"></div>
+                </div>
+                <p> scaleX(2) </p>
+            </div> 
+
+            <div class="card">
+                <div class="box scaleY">
+                    <div class="fill"></div>
+                </div>
+                <p> scaleY(2) </p>
+            </div>
+            
+            <div class="card">
+                <div class="box rotate">
+                    <div class="fill"></div>
+                </div>
+                <p> rotate(45) </p>
+            </div>  
+            
+            <div class="card">
+                <div class="box skew">
+                    <div class="fill"></div>
+                </div>
+                <p> skew(10deg, 10deg) </p>
+            </div>
+
+            <div class="card">
+                <div class="box skewX">
+                    <div class="fill"></div>
+                </div>
+                <p> skewX(10deg) </p>
+            </div> 
+            
+            <div class="card">
+                <div class="box skewY">
+                    <div class="fill"></div>
+                </div>
+                <p> skewY(10deg) </p>
+            </div>      
+
+            <div class="card">
+                <div class="box matrix">
+                    <div class="fill"></div>
+                </div>
+                <p> matrix(1.5, 0.174533, 0.174533, 1.5, 50, 50) </p>
+            </div>                  
+        </div>   
+        
+        <h3>3D Transform</h3>
+        <div class="container perspective">
+            <div class="card">
+                <div class="box translate3d">
+                    <div class="fill"></div>
+                </div>
+                <p> translate3d(50px, 50px, 50px) </p>
+            </div>
+
+            <div class="card">
+                <div class="box translateZ">
+                    <div class="fill"></div>
+                </div>
+                <p> translateZ(50px) </p>
+            </div>
+
+            <div class="card">
+                <div class="box scale3d">
+                    <div class="fill"></div>
+                </div>
+                <p> scale3d(2,2,2) </p>
+            </div>
+            
+            <div class="card">
+                <div class="box scaleZ">
+                    <div class="fill"></div>
+                </div>
+                <p> scaleZ(2) </p>
+            </div>
+
+            <div class="card">
+                <div class="box rotate3d">
+                    <div class="fill"></div>
+                </div>
+                <p> rotate3d(5,5,5,45deg) </p>
+            </div>  
+            
+            <div class="card">
+                <div class="box rotateX">
+                    <div class="fill"></div>
+                </div>
+                <p> rotateX(45deg) </p>
+            </div>  
+            
+            <div class="card">
+                <div class="box rotateY">
+                    <div class="fill"></div>
+                </div>
+                <p> rotateY(45deg) </p>
+            </div>  
+            
+            <div class="card">
+                <div class="box rotateZ">
+                    <div class="fill"></div>
+                </div>
+                <p> rotateZ(45deg) </p>
+            </div>        
+        </div>
+        
+        <h3>3D Transform-origin</h3>
+        <div class="container perspective origin">
+            <div class="card">
+                <div class="box rotateZ origin-0-0-0">
+                    <div class="fill"></div>
+                </div>
+                <p> 
+                        transform-origin: 0 0 0;<br>
+                        transform-origin: left top;<br>
+                        rotateZ(45deg);                     
+                </p>
+                
+            </div>
+            
+            <div class="card">
+                <div class="box rotateZ origin-100-0-0">
+                    <div class="fill"></div>
+                </div>
+                <p> 
+                        transform-origin: 100% 0 0;<br>
+                        transform-origin: right top;<br>
+                        rotateZ(45deg);                     
+                </p>
+            </div> 
+            
+            <div class="card">
+                <div class="box rotateZ origin-100-100-0">
+                    <div class="fill"></div>
+                </div>
+                <p> 
+                        transform-origin: 100% 100% 0;<br>
+                        transform-origin: right bottom;<br>
+                        rotateZ(45deg);                     
+                </p>
+            </div>  
+            <div class="card">
+                <div class="box rotateZ origin-0-100-0">
+                    <div class="fill"></div>
+                </div>
+                <p> 
+                        transform-origin: 0 100% 0;<br>
+                        transform-origin: left bottom;<br>
+                        rotateZ(45deg);                     
+                </p>
+            </div>  
+
+            <div class="card">
+                <div class="box rotateZ origin-center">
+                    <div class="fill"></div>
+                </div>
+                <p> 
+                    transform-origin: 50% 50% 0;<br> 
+                    transform-origin: center center 0;<br> 
+                    rotateZ(45deg); 
+                </p>
+            </div>         
+
+            <div class="card">
+                <div class="box rotateX origin-0-0-0">
+                    <div class="fill"></div>
+                </div>
+                <p> 
+                    transform-origin: 0 0 0;<br>
+                    transform-origin: 100% 0 0;<br>
+                     rotateX(45deg); 
+                </p>
+            </div>              
+           
+            <div class="card">
+                <div class="box rotateX origin-center">
+                    <div class="fill"></div>
+                </div>
+                <p> 
+                    transform-origin: 50% 50% 0;<br> 
+                    transform-origin: center center 0;<br> 
+                    rotateX(45deg); 
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="box rotateX origin-0-100-0">
+                    <div class="fill"></div>
+                </div>
+                <p> 
+                        transform-origin: 0 100% 0;<br>
+                        transform-origin: 100% 100% 0;<br>
+                        rotateX(45deg); 
+                </p>
+            </div>  
+
+
+            <div class="card">
+                <div class="box rotateY origin-0-0-0">
+                    <div class="fill"></div>
+                </div>
+                <p> 
+                    transform-origin: 0 0 0;<br>
+                    transform-origin: 0 100% 0;<br>
+                    rotateY(45deg); 
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="box rotateY origin-center">
+                    <div class="fill"></div>
+                </div>
+                <p> 
+                    transform-origin: 50% 50% 0;<br> 
+                    transform-origin: center center 0;<br> 
+                    rotateY(45deg); 
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="box rotateY origin-100-0-0">
+                    <div class="fill"></div>
+                </div>
+                <p> 
+                    transform-origin: 100% 0 0;<br>
+                    transform-origin: 100% 100% 0;<br>
+                    rotateY(45deg); 
+                </p>
+            </div>
+               
+
+            
+         
+
+            
+
+        </div>
+    </body>
+</html>
