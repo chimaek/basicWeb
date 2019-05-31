@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>transition</title>
+        <style>
+            .btn {
+                border: 5px solid #000;
+                border-radius:10px;
+                background-color: #fff;
+                color: #2c3e50;
+                display: inline-block;
+                padding: 15px;
+                /* line-height: 2em; */
+                position: relative;
+                text-decoration: none;
+            }
+            .btn span{
+                font-weight: bold
+            }
+
+            .btn:hover {                
+                box-shadow: 10px 10px 0 #e0e0e0, 20px 20px 0 #adadad, 30px 30px 0 #909090, 40px 40px 0 #808080;
+                transition: all 500ms ease;                
+            }
+        </style>
+    </head>
+    <body>
+        <a href="http://www.jejunu.ac.kr/main" class="btn">Jeju Univ</a>
+    </body>
+</html>

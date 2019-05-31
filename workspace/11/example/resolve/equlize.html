@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container {
+                display: inline-block;
+                position: relative;
+                width: 50px;
+                height: 20px;
+                background-color: #ddd;
+            }
+
+            .container > div {                
+                position: absolute;
+                bottom:5px;
+                margin: 0 auto;
+                width:2px;
+                height:11px;            
+                background-color: white;                                
+            }
+
+            .bar1 {         
+                left:10px;       
+                animation: equalize 1s infinite ;
+            }
+
+            .bar2 {
+                left:13px;
+                animation: equalize 1s 0.1s infinite reverse;
+            }
+
+            .bar3 {
+                left:16px;
+                animation: equalize 1s 0.2s  infinite ;
+            }
+
+            .bar4 {
+                left:19px;
+                animation: equalize 1s 0.3s  infinite reverse;
+            }
+
+            .bar5 {
+                left:22px;
+                animation: equalize 1s 0.4s infinite ;
+            }
+         
+
+            @keyframes equalize {
+                0%{height:11px}
+                4%{height:10px}
+                8%{height:9px}
+                12%{height:8px}
+                16%{height:7px}
+                20%{height:6px}
+                24%{height:5px}
+                28%{height:4px}
+                32%{height:3px}
+                36%{height:2px}
+                40%{height:3px}
+                44%{height:4px}
+                48%{height:5px}
+                52%{height:6px}
+                56%{height:7px}
+                60%{height:8px}
+                64%{height:9px}
+                68%{height:10px}
+                72%{height:11px}
+                76%{height:9px}
+                80%{height:7px}
+                84%{height:6px}
+                88%{height:4px}
+                92%{height:5px}
+                96%{height:7px}
+                100%{height:9px}
+            }
+                      
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <div class="bar4"></div>
+            <div class="bar5"></div>
+
+        </div>    
+    </body>
+</html>
